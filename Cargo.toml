@@ -1,0 +1,26 @@
+[package]
+name = "ordered-rs"
+version = "0.1.0"
+edition = "2021"
+
+[features]
+default = []
+
+# Enable `alloc`.
+alloc = []
+
+# Enable `std`.
+std = [
+	"alloc",
+]
+
+# Nightly features.
+
+# Use `extend_one`.
+extend-one = []
+
+[dependencies]
+
+[dev-dependencies]
+ordered-rs = { path = ".", features = ["alloc"] }
+hex = { version = "0.4.3" }
